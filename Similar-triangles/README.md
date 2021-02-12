@@ -13,9 +13,9 @@ similar_triangles([(1, 0), (1, 2), (2, 0)], [(3, 0), (5, 4), (5, 0)]) is True
 	
 <b>Input:</b>
 
-*Two lists as coordinates of vertices of each triangle.
-*Coordinates is three tuples of two integers.
-*Output: True or False.
+* Two lists as coordinates of vertices of each triangle.
+* Coordinates is three tuples of two integers.
+* Output: True or False.
 
 <b>Precondition:</b>
 ```
