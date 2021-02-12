@@ -28,7 +28,8 @@ figure.choose_figure(Hexagon())
 figure.perimeter() == 60
 
 figure.choose_figure(Cube())
-figure.volume() == 1000```
+figure.volume() == 1000
+```
 
 <b>Input:</b> Statements and expressions of the classes.
 
