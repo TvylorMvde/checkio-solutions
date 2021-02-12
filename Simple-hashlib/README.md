@@ -6,7 +6,7 @@ In a correctly designed system, a plain password is not stored in the database. 
 
 <b> Example:</b> 
 
-checkio('welcome', 'md5') == '40be4e59b9a2a2b5dffb918c0e86bhe3d7'
+checkio('welcome', 'md5') == '40be4e59b9a2a2b5dffb918c0e86bhe3d7'</br>
 checkio('happy spam', 'sha224') == '6e9dc3e01d57f1598c2b40ce59fc3527e698c77b15d0840ae96a8b5e'
 
 <b>Precondition:</b>
