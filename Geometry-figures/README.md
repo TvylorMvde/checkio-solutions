@@ -8,8 +8,8 @@ Also you have to create a class for each figure and use the Strategy design patt
 Every figure, except the cube, has the volume = 0.</br>
 If the result has no decimal places, you should return it as int(), in other case - round it to the 2 decimal points.
 
-```Examples:
-
+<b>Examples:</b>
+```
 figure = Parameters(10)
     
 figure.choose_figure(Circle())
