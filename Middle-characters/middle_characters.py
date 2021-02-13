@@ -5,8 +5,6 @@ def middle(text):
     return text[middle - 1] + text[middle]
 
 
-print(middle('test'))
-
 if __name__ == '__main__':
     print("Example:")
     print(middle('example'))
