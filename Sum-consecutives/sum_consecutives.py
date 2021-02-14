@@ -2,7 +2,7 @@ from itertools import groupby
 
 
 def sum_consecutives(numbers):
-    result = [(number, sum(1 for i in count)) for number, count in groupby(numbers)]
+    result = [(number, sum(1 for i in group)) for number, group in groupby(numbers)]
     return [x * y for (x, y) in result]
 
 
