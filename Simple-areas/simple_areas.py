@@ -2,13 +2,10 @@ from math import sqrt, pi, pow
 
 def simple_areas(*args):
     if len(args) == 3:
-        a, b, c = args
-        #heron formula: a + b + c / 2
-        h = sum(args) / 2
-        return sqrt(h * (h - a) * (h - b) * (h - c))
+        h = sum(args) / 2   # Heron's formula: a + b + c / 2
+        return sqrt(h * (h - args[0]) * (h - args[1]) * (h - args[2]))
     elif len(args) == 2:
-        a, b = args
-        return a * b
+        return args[0] * args[1]
     else:
         return pi * pow(1 / 2 * args[0], 2)
 
