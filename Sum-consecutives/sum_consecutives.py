@@ -17,4 +17,5 @@ if __name__ == '__main__':
     assert list(sum_consecutives([3, 3, 3, 4, 4, 5, 6, 6])) == [9, 8, 5, 12]
     assert list(sum_consecutives([1])) == [1]
     assert list(sum_consecutives([])) == []
+    
     print("Coding complete? Click 'Check' to earn cool rewards!")
