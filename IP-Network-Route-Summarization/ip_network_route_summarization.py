@@ -12,6 +12,7 @@ def convert_addresses_to_binary(addresses):
             addresses_in_binary.append("".join(binary))
     return addresses_in_binary
 
+
 def find_common_bits(addresses):
     addresses = sorted(addresses)
     result = ""
@@ -21,6 +22,7 @@ def find_common_bits(addresses):
         else:
             break
     return result
+
 
 def generate_new_address(common_b): 
     address = common_b + "".join([str(0) for i in range(32 - len(common_b))])

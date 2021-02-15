@@ -1,8 +1,9 @@
 An IP network is a set of routers that communicate routing information using a protocol. A router is uniquely identified by an IP address.</br>
 In IPv4, an IP address consists of 32 bits, canonically represented as 4 decimal numbers of 8 bits each. The decimal numbers range from 0 (00000000) to 255 (11111111).</br>
 Each router has a "routing table" that contains a list of IP addresses, for the router to know where to send IP packets.</br>
-<b>Route summarization in IP networks</b>
+<b>Route summarization in IP networks</b></br>
 As the network grows large (hundreds of routers), the number of IP addresses in the routing table increases rapidly. Maintaining a high number of IP addresses in the routing table would result in a loss of performances (memory, bandwidth and CPU resources limitation).</br>
+
 Route summarization, also called route aggregation, consists in reducing the number of routes by aggregating them into a "summary route".
 
 Let's consider the following example:
@@ -17,23 +18,23 @@ This implies that:
 - <b>B</b> saves memory: it has only one route to store in its routing table
 - <b>B</b> saves CPU resources: there are less entries to consider when handling incoming IP packets
 
-<b>Computing a summary route</b>
+<b>Computing a summary route:</b>
 
 <b>A</b> has all 4 addresses stored in its routing table.
 
-<b>
-    Address 1	172.16.12.0
-    Address 2	172.16.13.0
-    Address 3	172.16.14.0
-    Address 4	172.16.15.0
+<br>
+    Address 1	    172.16.12.0</br>
+    Address 2	    172.16.13.0</br>
+    Address 3	    172.16.14.0</br>
+    Address 4	    172.16.15.0</br>
 </b>
 
 A will convert these IP addresses to binary format, align them and find the boundary line between the common prefix on the left (highlighted in red), and the remaining bits on the right.
 
-<b>Address 1</b>	10101100	00010000	00001100	00000000
-<b>Address 2</b>	10101100	00010000	00001101	00000000
-<b>Address 3</b>	10101100	00010000	00001110	00000000
-<b>Address 4</b>	10101100	00010000	00001111	00000000
+<b>Address 1</b>	    10101100	00010000	00001100	00000000</br>
+<b>Address 2</b>	    10101100	00010000	00001101	00000000</br>
+<b>Address 3</b>	    10101100	00010000	00001110	00000000</br>
+<b>Address 4</b>	    10101100	00010000	00001111	00000000</br>
 
 <b>A</b> creates a new IP address made of the common bits, and all other bits set to "0".
 This new IP address is converted back to decimal numbers.
@@ -51,7 +52,7 @@ checkio(["172.16.12.0", "172.16.13.0", "172.16.14.0", "172.16.15.0"]) == "172.16
 checkio(["172.16.12.0", "172.16.13.0", "172.155.43.9"]) == "172.0.0.0/8"
 checkio(["172.16.12.0", "172.16.13.0", "172.155.43.9", "146.11.2.2"]) == "128.0.0.0/2"
 ```
-<b>Preconditions:</b>
-all(re.match(r"^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$",d) for d in data))
-all(-1 < int(n) < 256 for n in d.split(".") for d in data)
-len(data) == len(set(data)) and len(data) > 1
+<b>Preconditions:</b></br>
+all(re.match(r"^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$",d) for d in data))</br>
+all(-1 < int(n) < 256 for n in d.split(".") for d in data)</br>
+len(data) == len(set(data)) and len(data) > 1</br>
