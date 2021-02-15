@@ -26,7 +26,7 @@ This implies that:
 <b>A</b> has all 4 addresses stored in its routing table.
 
 
-<b>Address 1</b>	    172.16.12.0</b>
+<b>Address 1</b>	    172.16.12.0</br>
 <b>Address 2</b>	    172.16.13.0</br>
 <b>Address 3</b>	    172.16.14.0</br>
 <b>Address 4</b>	    172.16.15.0</br>
