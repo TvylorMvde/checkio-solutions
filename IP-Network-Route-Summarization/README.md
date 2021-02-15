@@ -1,5 +1,6 @@
 An IP network is a set of routers that communicate routing information using a protocol. A router is uniquely identified by an IP address.</br>
 In IPv4, an IP address consists of 32 bits, canonically represented as 4 decimal numbers of 8 bits each. The decimal numbers range from 0 (00000000) to 255 (11111111).</br>
+
 Each router has a "routing table" that contains a list of IP addresses, for the router to know where to send IP packets.</br>
 
 <b>Route summarization in IP networks</b></br>
@@ -24,12 +25,12 @@ This implies that:
 
 <b>A</b> has all 4 addresses stored in its routing table.
 
-<b>
-    Address 1	    172.16.12.0</b>
-    Address 2	    172.16.13.0</br>
-    Address 3	    172.16.14.0</br>
-    Address 4	    172.16.15.0</br>
-</b>
+
+<b>Address 1</b>	    172.16.12.0</b>
+<b>Address 2</b>	    172.16.13.0</br>
+<b>Address 3</b>	    172.16.14.0</br>
+<b>Address 4</b>	    172.16.15.0</br>
+
 
 A will convert these IP addresses to binary format, align them and find the boundary line between the common prefix on the left (highlighted in red), and the remaining bits on the right.
 
@@ -40,6 +41,7 @@ A will convert these IP addresses to binary format, align them and find the boun
 
 <b>A</b> creates a new IP address made of the common bits, and all other bits set to "0".
 This new IP address is converted back to decimal numbers.
+
 Finally, <b>A</b> computes the number of common bits, also called "subnet".
 
 The summary route is this new IP address, followed by a slash and the subnet: 172.16.12.0/22
